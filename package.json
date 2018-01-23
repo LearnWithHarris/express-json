@@ -1,0 +1,23 @@
+{
+  "name": "express-one-to-many",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxford-fox-2017/express-one-to-many.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oxford-fox-2017/express-one-to-many/issues"
+  },
+  "homepage": "https://github.com/oxford-fox-2017/express-one-to-many#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
