@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <h2>CONTACT</h2>
+        <tr>
+            <th>ID</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Zip Code</th>
+            <th>Contact ID</th>
+        </tr>
+        <% address.forEach(element => {%>
+        <tr>
+            <td><%=element.id%></td>
+            <td><%=element.street%></td>
+            <td><%=element.city%></td>
+            <td><%=element.zip_code%></td>
+            <td><%=element.name%></td>
+        </tr>
+    </table>
+    <br><br><br>
+    <h4>Edit Address</h4>
+    <form action="/addresses/edit/<%=element.id%>" method="POST">
+            <input type="text" name="street" placeholder="<%=element.street%>">
+            <input type="text" name="city" placeholder="<%=element.city%>">
+            <input type="number" name="zip_code" placeholder="<%=element.zip_code%>">
+            <input type="number" name="contact_id" placeholder="<%=element.contact_id%>">
+            <input type="submit" value="Edit">
+    </form>
+    <%})%>
+</body>
+</html>

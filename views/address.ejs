@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <h2>ADDRESS</h2>
+        <tr>
+            <th>ID</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>Zip Code</th>
+            <th>Contact ID</th>
+            <th>Contact Name</th>
+        </tr>
+        <% address.forEach(element => {%>
+        <tr>
+            <td><%=element.id%></td>
+            <td><%=element.street%></td>
+            <td><%=element.city%></td>
+            <td><%=element.zip_code%></td>
+            <td><%=element.contact_id%></td>
+            <td><%=element.name%></td>
+            <td>
+                <nav>
+                    <a href="/addresses/edit/<%=element.id%>">edit</a>
+                </nav>
+                <nav>
+                <a href="/addresses/delete/<%=element.id%>">Delete</a>
+                </nav>
+            </td>
+        </tr>
+        <%})%>
+    </table>
+    <br><br><br>
+    <h4>Input Address</h4>
+    <br>
+    <form action="/addresses" method="POST">
+        <input type="text" name="street" placeholder="Input Street">
+        <input type="text" name="city" placeholder="Input City"> 
+        <input type="number" name="zip_code" placeholder="Input Zip Code">
+        <!-- <input type="number" name="contact_id" placeholder="Input Contact's Address"> -->
+            <select name="contact_id">
+            <% contact.forEach(element => { %>
+                <option value="<%= element.id %>"><%=element.name%></option>
+            <% }) %>
+            </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

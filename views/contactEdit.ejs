@@ -24,13 +24,16 @@
             <td><%=element.phone%></td>
             <td><%=element.email%></td>
         </tr>
-        <form action="" method="POST">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-        </form>
-        <%})%>
     </table>
+    <br><br><br>
+    <h4>Edit Contact</h4>
+    <form action="/contacts/edit/<%=element.id%>" method="POST">
+            <input type="text" name="name" placeholder="<%=element.name%>">
+            <input type="text" name="company" placeholder="<%=element.company%>">
+            <input type="number" name="phone" placeholder="<%=element.phone%>">
+            <input type="text" name="email" placeholder="<%=element.email%>">
+            <input type="submit" value="Edit">
+    </form>
+    <%})%>
 </body>
 </html>
