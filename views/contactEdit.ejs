@@ -28,10 +28,10 @@
     <br><br><br>
     <h4>Edit Contact</h4>
     <form action="/contacts/edit/<%=element.id%>" method="POST">
-            <input type="text" name="name" placeholder="<%=element.name%>">
-            <input type="text" name="company" placeholder="<%=element.company%>">
-            <input type="number" name="phone" placeholder="<%=element.phone%>">
-            <input type="text" name="email" placeholder="<%=element.email%>">
+            <input type="text" name="name" value="<%=element.name%>">
+            <input type="text" name="company" value="<%=element.company%>">
+            <input type="number" name="phone" value="<%=element.phone%>">
+            <input type="text" name="email" value="<%=element.email%>">
             <input type="submit" value="Edit">
     </form>
     <%})%>

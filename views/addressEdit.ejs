@@ -28,10 +28,14 @@
     <br><br><br>
     <h4>Edit Address</h4>
     <form action="/addresses/edit/<%=element.id%>" method="POST">
-            <input type="text" name="street" placeholder="<%=element.street%>">
-            <input type="text" name="city" placeholder="<%=element.city%>">
-            <input type="number" name="zip_code" placeholder="<%=element.zip_code%>">
-            <input type="number" name="contact_id" placeholder="<%=element.contact_id%>">
+            <input type="text" name="street" value="<%=element.street%>">
+            <input type="text" name="city" value="<%=element.city%>">
+            <input type="number" name="zip_code" value="<%=element.zip_code%>">
+            <select name="contact_id">
+            <% contact.forEach(elements => { %>
+                <option value="<%= elements.id%>"><%= elements.name %></option>
+            <% }) %>
+            </select>
             <input type="submit" value="Edit">
     </form>
     <%})%>
